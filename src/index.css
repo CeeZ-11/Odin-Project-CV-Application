@@ -1,0 +1,148 @@
+:root {
+  /* Light Theme Colors */
+  --light-background: #f9f9f9;
+  --light-text: #333;
+  --light-link: #007bff;
+  --light-button: #007bff;
+
+  /* Dark Theme Colors */
+  --dark-background: #121212;
+  --dark-text: #e0e0e0;
+  --dark-link: #1e90ff;
+  --dark-button: #333;
+
+  /* Font Sizes */
+  --font-size-base: 1rem;
+  --font-size-large: 1.25rem;
+  /* Spacing */
+  --space-base: 1rem;
+}
+
+/* Universal Box Sizing */
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset Margins */
+* {
+  margin: 0;
+}
+
+/* Body Styling */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-size: var(--font-size-base);
+  background-color: var(--light-background); /* Default light theme */
+  color: var(--light-text);
+}
+
+/* Images and Media Elements */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Form Elements */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Text Wrapping */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Root Containers */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Light Theme (Morning) */
+body.light-theme {
+  background-color: var(--light-background);
+  color: var(--light-text);
+}
+
+body.light-theme h1,
+body.light-theme h2,
+body.light-theme h3,
+body.light-theme p {
+  color: var(--light-text);
+}
+
+a {
+  color: var(--light-link);
+}
+
+button {
+  background-color: var(--light-button);
+  color: white;
+}
+
+/* Dark Theme (Night) */
+body.dark-theme {
+  background-color: var(--dark-background);
+  color: var(--dark-text);
+}
+
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme p {
+  color: var(--dark-text);
+}
+
+a {
+  color: var(--dark-link);
+}
+
+button {
+  background-color: var(--dark-button);
+  color: white;
+}
+
+/* Media Query for System Preference */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--dark-background);
+    color: var(--dark-text);
+  }
+  a {
+    color: var(--dark-link);
+  }
+  button {
+    background-color: var(--dark-button);
+    color: white;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: var(--light-background);
+    color: var(--light-text);
+  }
+  a {
+    color: var(--light-link);
+  }
+  button {
+    background-color: var(--light-button);
+    color: white;
+  }
+}
