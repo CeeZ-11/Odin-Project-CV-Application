@@ -1,0 +1,23 @@
+main {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template: 1fr / repeat(2, 1fr);
+}
+
+.editor {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 6rem 0;
+}
+
+.resume {
+  display: grid;
+  grid-template: auto 1fr / 1fr;
+}
+
+.resume-container {
+  display: grid;
+  grid-template: 1fr / repeat(2, 1fr);
+  margin: 1rem 8rem;
+}
