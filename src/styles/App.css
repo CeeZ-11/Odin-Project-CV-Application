@@ -21,3 +21,9 @@ main {
   grid-template: 1fr / repeat(2, 1fr);
   margin: 1rem 8rem;
 }
+
+.grey-line {
+  margin: 0.5rem 0;
+  border-top: var(--thematic-break-width) var(--thematic-break-type)
+    var(--thematic-break-color);
+}

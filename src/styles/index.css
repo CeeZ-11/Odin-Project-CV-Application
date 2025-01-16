@@ -16,6 +16,11 @@
   --font-size-large: 1.25rem;
   /* Spacing */
   --space-base: 1rem;
+
+  /* Thematic break */
+  --thematic-break-width: 0.1rem;
+  --thematic-break-color: rgb(131, 131, 131);
+  --thematic-break-type: solid;
 }
 
 /* Universal Box Sizing */
