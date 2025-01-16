@@ -10,11 +10,6 @@ lerna-debug.log*
 # Node modules
 node_modules
 
-# Build output
-build/
-dist/
-dist-ssr/
-
 # Environment variables
 .env
 .env.* # In case you have multiple environment files
