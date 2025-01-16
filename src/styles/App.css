@@ -23,7 +23,66 @@ main {
 }
 
 .grey-line {
-  margin: 0.5rem 0;
-  border-top: var(--thematic-break-width) var(--thematic-break-type)
-    var(--thematic-break-color);
+  margin: 0.5rem 0 1rem 0;
+  border-top: var(--thematic-break-bdTop);
+}
+
+.personal-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.3em 0;
+}
+
+.wideSpan {
+  grid-column: span 2;
+}
+
+textarea {
+  height: 8rem;
+}
+
+input,
+textarea {
+  padding: var(--input-padding);
+  margin: var(--input-margin);
+  background-color: var(--input-background-color);
+  font-size: var(--input-font-size);
+  border-radius: var(--input-border-radius);
+  border: var(--input-and-textArea-border);
+  flex: 1;
+}
+
+.comment {
+  position: relative;
+  display: flex;
+}
+
+label {
+  text-align: center;
+  font-weight: var(--label-font-weight);
+  background-color: var(--input-background-color);
+  padding: var(--label-padding);
+  font-size: var(--label-font-size);
+  left: var(--label-left);
+  bottom: var(--label-bottom);
+  transition: all 0.3s ease-in;
+  position: absolute;
+}
+
+.textareaLabel {
+  left: var(--label-textArea-left);
+  bottom: var(--label-textArea-bottom);
+}
+
+input:focus::placeholder {
+  opacity: 0;
+}
+
+@media (max-width: 1200px) {
+  .personal-details {
+    grid-template-columns: 1fr;
+  }
+  .wideSpan {
+    grid-column: span 1;
+  }
 }
