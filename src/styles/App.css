@@ -74,7 +74,8 @@ label {
   bottom: var(--label-textArea-bottom);
 }
 
-input:focus::placeholder {
+input:focus::placeholder,
+textarea:focus::placeholder {
   opacity: 0;
 }
 
