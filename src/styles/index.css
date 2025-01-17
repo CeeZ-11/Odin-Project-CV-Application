@@ -38,6 +38,16 @@
 
   /* Input and TextAread border */
   --input-and-textArea-border: 1px solid black;
+
+  /* Button  */
+  --button-bg-color: white;
+  --button-color: gray;
+  --button-border-radius: 50%;
+  --button-height: 1.5rem;
+  --button-width: 1.5rem;
+  --button-font-size: 0.6rem;
+
+  --button-font-sizeTitle: 0.8rem;
 }
 
 /* Universal Box Sizing */
@@ -126,8 +136,18 @@ a {
 }
 
 button {
-  background-color: var(--light-button);
-  color: white;
+  background-color: var(--button-bg-color);
+  color: var(--button-color);
+  border-radius: var(--button-border-radius);
+  cursor: pointer;
+  transition: transform 0.1s ease;
+  height: var(--button-height);
+  width: var(--button-width);
+  font-size: var(--button-font-size);
+}
+
+button:hover {
+  transform: scale(1.1);
 }
 
 /* Dark Theme (Night) */
@@ -148,8 +168,9 @@ a {
 }
 
 button {
-  background-color: var(--dark-button);
-  color: white;
+  background-color: var(--button-bg-color);
+  color: var(--button-color);
+  border-radius: var(--button-border-radius);
 }
 
 /* Media Query for System Preference */
@@ -162,8 +183,9 @@ button {
     color: var(--dark-link);
   }
   button {
-    background-color: var(--dark-button);
-    color: white;
+    background-color: var(--button-bg-color);
+    color: var(--button-color);
+    border-radius: var(--button-border-radius);
   }
 }
 
@@ -176,8 +198,9 @@ button {
     color: var(--light-link);
   }
   button {
-    background-color: var(--light-button);
-    color: white;
+    background-color: var(--button-bg-color);
+    color: var(--button-color);
+    border-radius: var(--button-border-radius);
   }
 }
 
