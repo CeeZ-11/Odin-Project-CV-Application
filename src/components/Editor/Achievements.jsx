@@ -53,7 +53,7 @@ export default function Achievements() {
 
   return (
     <>
-      <div className="achievements-title">
+      <div className="titles achievements-title">
         <h3>Achievements</h3>{" "}
         <button type="button" onClick={addAchievements}>
           +

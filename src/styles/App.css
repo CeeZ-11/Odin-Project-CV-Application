@@ -80,7 +80,7 @@ textarea:focus::placeholder {
   opacity: 0;
 }
 
-.skillsTitle {
+.titles {
   display: flex;
   align-items: end;
   text-align: center;

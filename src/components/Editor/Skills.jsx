@@ -30,7 +30,7 @@ export default function Skills() {
 
   return (
     <>
-      <div className="skillsTitle">
+      <div className="titles skillsTitle">
         <h3>Skills</h3>{" "}
         <button type="button" onClick={addSkills}>
           +
