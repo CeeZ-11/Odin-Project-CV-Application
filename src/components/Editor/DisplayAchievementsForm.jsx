@@ -6,6 +6,7 @@ export default function DisplayAchievementsForm({
   date,
   end_date,
   handleInputChange,
+  changeFormDisplay,
 }) {
   return (
     <>
@@ -73,7 +74,11 @@ export default function DisplayAchievementsForm({
           />
           <label htmlFor="endDate">End Date</label>
         </div>
-        <button type="button" className="achievements-btn">
+        <button
+          type="button"
+          className="achievements-btn"
+          onClick={() => changeFormDisplay(id)}
+        >
           Cancel
         </button>
       </form>

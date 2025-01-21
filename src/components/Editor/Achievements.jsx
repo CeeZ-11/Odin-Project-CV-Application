@@ -73,6 +73,19 @@ export default function Achievements() {
     setAchievements(updatedAchievements);
   };
 
+  const changeFormDisplay = (id) => {
+    const updatedAchievements = achievements.map((achievement) => {
+      if (achievement.id === id) {
+        return {
+          ...achievement,
+          display: true,
+        };
+      }
+      return achievement;
+    });
+    setAchievements(updatedAchievements);
+  };
+
   const handleInputChange = (id, field, value) => {
     const updatedAchievements = achievements.map((achievement) => {
       if (achievement.id === id) {
@@ -112,6 +125,7 @@ export default function Achievements() {
                 removeAchievements={removeAchievements}
                 changeDisplay={changeDisplay}
                 handleInputChange={handleInputChange}
+                changeFormDisplay={changeFormDisplay}
               />
             </li>
           </div>

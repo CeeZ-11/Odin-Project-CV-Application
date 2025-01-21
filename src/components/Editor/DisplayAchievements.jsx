@@ -10,6 +10,7 @@ export default function DisplayAchievements({
   removeAchievements,
   changeDisplay,
   handleInputChange,
+  changeFormDisplay,
 }) {
   return (
     <>
@@ -31,6 +32,7 @@ export default function DisplayAchievements({
           date={date}
           end_date={end_date}
           handleInputChange={handleInputChange}
+          changeFormDisplay={changeFormDisplay}
         />
       )}
 
