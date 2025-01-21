@@ -65,20 +65,20 @@ export default function Achievements() {
       <ul className="achievements-ul">
         {achievements.map((achievement) => (
           <div className="achievements-container" key={achievement.id}>
-            <li>
+            <li className="achievements-li">
               <div className="achievement-list">
                 <h5>{achievement.title}</h5>
-                <p>{achievement.description}</p>
-                <p>{achievement.result}</p>
                 <p>{achievement.date}</p>
-                <button type="button">Edit</button>
               </div>
-              <button
-                type="button"
-                onClick={() => removeAchievements(achievement.id)}
-              >
-                x
-              </button>
+              <div className="achievements-btn-div">
+                <button type="button">Edit</button>
+                <button
+                  type="button"
+                  onClick={() => removeAchievements(achievement.id)}
+                >
+                  x
+                </button>
+              </div>
             </li>
           </div>
         ))}

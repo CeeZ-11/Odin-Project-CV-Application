@@ -117,6 +117,22 @@ li input {
   flex: 1;
 }
 
+.achievements-container {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.achievements-li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.achievements-btn-div {
+  display: flex;
+  gap: 5px;
+}
+
 @media (max-width: 1200px) {
   .personal-details {
     grid-template-columns: 1fr;
