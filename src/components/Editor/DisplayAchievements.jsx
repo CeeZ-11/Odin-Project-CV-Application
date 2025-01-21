@@ -35,7 +35,11 @@ export default function DisplayAchievements({
       )}
 
       <div className="achievements-btn-div">
-        <button type="button" onClick={() => changeDisplay(id)}>
+        <button
+          type="button"
+          onClick={() => changeDisplay(id)}
+          className="achievements-btn"
+        >
           Edit
         </button>
         <button type="button" onClick={() => removeAchievements(id)}>
