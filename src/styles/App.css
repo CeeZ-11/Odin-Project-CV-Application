@@ -39,6 +39,7 @@ main {
 
 textarea {
   height: 8rem;
+  resize: none;
 }
 
 input,
