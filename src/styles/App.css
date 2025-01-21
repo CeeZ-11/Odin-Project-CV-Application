@@ -88,9 +88,9 @@ textarea:focus::placeholder {
   gap: 5px;
 }
 
-.skillsTitle button {
+.titles button {
   font-size: var(--button-font-sizeTitle);
-  margin-bottom: 2px;
+  margin-bottom: 6px;
 }
 
 .skills-container {
