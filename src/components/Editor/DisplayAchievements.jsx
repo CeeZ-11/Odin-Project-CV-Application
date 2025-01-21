@@ -5,25 +5,32 @@ export default function DisplayAchievements({
   description,
   result,
   date,
+  end_date,
   display,
   removeAchievements,
   changeDisplay,
+  handleInputChange,
 }) {
   return (
     <>
       {display && (
         <div className="achievement-list">
           <h5>{title}</h5>
-          <p>{date}</p>
+          <p>
+            {date} - {end_date}
+          </p>
         </div>
       )}
 
       {!display && (
         <DisplayAchievementsForm
+          id={id}
           title={title}
           description={description}
           result={result}
           date={date}
+          end_date={end_date}
+          handleInputChange={handleInputChange}
         />
       )}
 

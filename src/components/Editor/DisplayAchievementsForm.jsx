@@ -1,50 +1,74 @@
 export default function DisplayAchievementsForm({
+  id,
   title,
   description,
   result,
   date,
+  end_date,
+  handleInputChange,
 }) {
   return (
-    <form className="personal-details">
-      <div className="comment achivement-title">
+    <form className="achievement-details">
+      <div className="comment achievement-title">
         <input
           type="text"
-          name="fName"
-          id="fName"
+          name="title"
+          id="title"
           pattern="^[^0-9]+$"
-          maxLength="25"
+          maxLength="100"
           value={title || null}
+          onChange={(e) => handleInputChange(id, "title", e.target.value)}
           required
         />
-        <label htmlFor="fName">Title</label>
+        <label htmlFor="title">Title</label>
       </div>
-      <div className="comment achivement-description">
+      <div className="comment achievement-description">
         <input
           type="text"
-          name="lName"
-          id="lName"
+          name="description"
+          id="description"
           pattern="^[^0-9]+$"
-          maxLength="25"
+          maxLength="100"
           value={description || null}
+          onChange={(e) => handleInputChange(id, "description", e.target.value)}
           required
         />
-        <label htmlFor="lName">Description</label>
+        <label htmlFor="description">Description</label>
       </div>
-      <div className="comment achivement-result">
+      <div className="comment achievement-result">
         <input
           type="text"
-          name="occupation"
-          id="occupation"
+          name="result"
+          id="result"
           pattern="^[^0-9]+$"
-          maxLength="25"
+          maxLength="100"
           value={result || null}
+          onChange={(e) => handleInputChange(id, "result", e.target.value)}
           required
         />
-        <label htmlFor="occupation">Result</label>
+        <label htmlFor="result">Result</label>
       </div>
-      <div className="comment achivement-date">
-        <input type="date" name="date" id="date" value={date} required />
+      <div className="comment achievement-date">
+        <input
+          type="month"
+          name="date"
+          id="date"
+          onChange={(e) => handleInputChange(id, "date", e.target.value)}
+          value={date}
+          required
+        />
         <label htmlFor="date">Date</label>
+      </div>
+      <div className="comment achievement-endDate">
+        <input
+          type="month"
+          name="endDate"
+          id="endDate"
+          onChange={(e) => handleInputChange(id, "end_date", e.target.value)}
+          value={end_date}
+          required
+        />
+        <label htmlFor="endDate">End Date</label>
       </div>
     </form>
   );
