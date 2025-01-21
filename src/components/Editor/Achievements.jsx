@@ -1,4 +1,5 @@
 import { useState } from "react";
+import DisplayAchievements from "./DisplayAchievements";
 
 const achievementsList = [
   {
@@ -25,6 +26,7 @@ const achievementsList = [
     date: "April 2023 - October 2023",
   },
 ];
+
 export default function Achievements() {
   const [achievements, setAchievements] = useState(achievementsList);
 
@@ -66,19 +68,12 @@ export default function Achievements() {
         {achievements.map((achievement) => (
           <div className="achievements-container" key={achievement.id}>
             <li className="achievements-li">
-              <div className="achievement-list">
-                <h5>{achievement.title}</h5>
-                <p>{achievement.date}</p>
-              </div>
-              <div className="achievements-btn-div">
-                <button type="button">Edit</button>
-                <button
-                  type="button"
-                  onClick={() => removeAchievements(achievement.id)}
-                >
-                  x
-                </button>
-              </div>
+              {DisplayAchievements(
+                achievement.id,
+                achievement.title,
+                achievement.date,
+                removeAchievements
+              )}
             </li>
           </div>
         ))}
