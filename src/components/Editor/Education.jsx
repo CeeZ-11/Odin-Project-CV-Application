@@ -99,6 +99,7 @@ export default function Education() {
             <li className="achievements-li">
               <DisplayEducation
                 id={educ.id}
+                school={educ.school}
                 degree={educ.degree}
                 city={educ.city}
                 date={educ.date}
