@@ -7,7 +7,8 @@ const achievementsList = [
     title: "Increased Website Traffic",
     description: "Optimized SEO strategies and improved content strategies.",
     result: "Increased website traffic by 40%.",
-    date: "January 2023 - June 2023",
+    date: "2023-01-01",
+    display: true,
   },
   {
     id: 1,
@@ -15,7 +16,8 @@ const achievementsList = [
     description:
       "Managed the development and launch of a mobile app, coordinating with a team of developers.",
     result: "Achieved 50,000 downloads within the first 3 months.",
-    date: "March 2023 - May 2023",
+    date: "2023-03-01",
+    display: true,
   },
   {
     id: 2,
@@ -23,7 +25,8 @@ const achievementsList = [
     description:
       "Leveraged lead-generation techniques and maintained client relationships.",
     result: "Generated $100,000 in new business.",
-    date: "April 2023 - October 2023",
+    date: "2023-05-01",
+    display: true,
   },
 ];
 
@@ -49,8 +52,22 @@ export default function Achievements() {
         description: "",
         result: "",
         date: "",
+        display: true,
       },
     ]);
+  };
+
+  const changeDisplay = (id) => {
+    const updatedAchievements = achievements.map((achievement) => {
+      if (achievement.id === id) {
+        return {
+          ...achievement,
+          display: false,
+        };
+      }
+      return achievement;
+    });
+    setAchievements(updatedAchievements);
   };
 
   return (
@@ -68,12 +85,16 @@ export default function Achievements() {
         {achievements.map((achievement) => (
           <div className="achievements-container" key={achievement.id}>
             <li className="achievements-li">
-              {DisplayAchievements(
-                achievement.id,
-                achievement.title,
-                achievement.date,
-                removeAchievements
-              )}
+              <DisplayAchievements
+                id={achievement.id}
+                title={achievement.title}
+                description={achievement.description}
+                result={achievement.result}
+                date={achievement.date}
+                display={achievement.display}
+                removeAchievements={removeAchievements}
+                changeDisplay={changeDisplay}
+              />
             </li>
           </div>
         ))}
