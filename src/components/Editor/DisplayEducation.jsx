@@ -10,9 +10,9 @@ export default function DisplayEducation({
   description,
   display,
   removeEducation,
-  changeDisplay,
-  handleInputChange,
-  changeFormDisplay,
+  changeEducationDisplay,
+  handleEducInputChange,
+  changeEducationFormDisplay,
 }) {
   return (
     <>
@@ -36,15 +36,15 @@ export default function DisplayEducation({
           date={date}
           end_date={end_date}
           description={description}
-          handleInputChange={handleInputChange}
-          changeFormDisplay={changeFormDisplay}
+          handleEducInputChange={handleEducInputChange}
+          changeEducationFormDisplay={changeEducationFormDisplay}
         />
       )}
 
       <div className="education-btn-div">
         <button
           type="button"
-          onClick={() => changeDisplay(id)}
+          onClick={() => changeEducationDisplay(id)}
           className="education-btn"
         >
           Edit

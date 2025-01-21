@@ -33,7 +33,7 @@ export default function Education() {
       ...education,
       {
         id: education.length,
-        school: "University of ",
+        school: "",
         degree: "",
         city: "",
         date: "",
@@ -44,41 +44,41 @@ export default function Education() {
     ]);
   };
 
-  const changeDisplay = (id) => {
+  const changeEducationDisplay = (id) => {
     const updatedEducation = education.map((educ) => {
       if (educ.id === id) {
         return {
-          ...education,
+          ...educ,
           display: false,
         };
       }
-      return education;
+      return educ;
     });
     setEducation(updatedEducation);
   };
 
-  const changeFormDisplay = (id) => {
+  const changeEducationFormDisplay = (id) => {
     const updatedEducation = education.map((educ) => {
       if (educ.id === id) {
         return {
-          ...education,
+          ...educ,
           display: true,
         };
       }
-      return education;
+      return educ;
     });
     setEducation(updatedEducation);
   };
 
-  const handleInputChange = (id, field, value) => {
+  const handleEducInputChange = (id, field, value) => {
     const updatedEducation = education.map((educ) => {
       if (educ.id === id) {
         return {
-          ...education,
+          ...educ,
           [field]: value,
         };
       }
-      return education;
+      return educ;
     });
     setEducation(updatedEducation);
   };
@@ -86,7 +86,7 @@ export default function Education() {
   return (
     <>
       <div className="titles education-title">
-        <h3>Education</h3>{" "}
+        <h3>Education</h3>
         <button type="button" onClick={addEducation}>
           +
         </button>
@@ -96,8 +96,8 @@ export default function Education() {
 
       <ul className="education-ul">
         {education.map((educ) => (
-          <div className="achievements-container" key={educ.id}>
-            <li className="achievements-li">
+          <div className="education-container" key={educ.id}>
+            <li className="education-li">
               <DisplayEducation
                 id={educ.id}
                 school={educ.school}
@@ -108,9 +108,9 @@ export default function Education() {
                 description={educ.description}
                 display={educ.display}
                 removeEducation={removeEducation}
-                changeDisplay={changeDisplay}
-                handleInputChange={handleInputChange}
-                changeFormDisplay={changeFormDisplay}
+                changeEducationDisplay={changeEducationDisplay}
+                handleEducInputChange={handleEducInputChange}
+                changeEducationFormDisplay={changeEducationFormDisplay}
               />
             </li>
           </div>

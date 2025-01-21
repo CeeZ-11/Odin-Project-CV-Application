@@ -6,8 +6,8 @@ export default function DisplayEducationForm({
   date,
   end_date,
   description,
-  handleInputChange,
-  changeFormDisplay,
+  handleEducInputChange,
+  changeEducationFormDisplay,
 }) {
   return (
     <>
@@ -20,7 +20,9 @@ export default function DisplayEducationForm({
             pattern="^[^0-9]+$"
             maxLength="100"
             value={school || ""}
-            onChange={(e) => handleInputChange(id, "title", e.target.value)}
+            onChange={(e) =>
+              handleEducInputChange(id, "school", e.target.value)
+            }
             required
           />
           <label htmlFor="school">School</label>
@@ -33,7 +35,9 @@ export default function DisplayEducationForm({
             pattern="^[^0-9]+$"
             maxLength="100"
             value={degree || ""}
-            onChange={(e) => handleInputChange(id, "degree", e.target.value)}
+            onChange={(e) =>
+              handleEducInputChange(id, "degree", e.target.value)
+            }
             required
           />
           <label htmlFor="degree">Degree</label>
@@ -46,7 +50,7 @@ export default function DisplayEducationForm({
             pattern="^[^0-9]+$"
             maxLength="100"
             value={city || ""}
-            onChange={(e) => handleInputChange(id, "city", e.target.value)}
+            onChange={(e) => handleEducInputChange(id, "city", e.target.value)}
             required
           />
           <label htmlFor="city">City</label>
@@ -56,7 +60,7 @@ export default function DisplayEducationForm({
             type="month"
             name="date"
             id="date"
-            onChange={(e) => handleInputChange(id, "date", e.target.value)}
+            onChange={(e) => handleEducInputChange(id, "date", e.target.value)}
             value={date || ""}
             required
           />
@@ -67,7 +71,9 @@ export default function DisplayEducationForm({
             type="month"
             name="endDate"
             id="endDate"
-            onChange={(e) => handleInputChange(id, "end_date", e.target.value)}
+            onChange={(e) =>
+              handleEducInputChange(id, "end_date", e.target.value)
+            }
             value={end_date || ""}
             required
           />
@@ -79,10 +85,10 @@ export default function DisplayEducationForm({
             name="description"
             id="description"
             pattern="^[^0-9]+$"
-            maxLength="100"
+            maxLength="500"
             value={description || ""}
             onChange={(e) =>
-              handleInputChange(id, "description", e.target.value)
+              handleEducInputChange(id, "description", e.target.value)
             }
             required
           />
@@ -91,7 +97,7 @@ export default function DisplayEducationForm({
         <button
           type="button"
           className="education-btn"
-          onClick={() => changeFormDisplay(id)}
+          onClick={() => changeEducationFormDisplay(id)}
         >
           Close
         </button>
