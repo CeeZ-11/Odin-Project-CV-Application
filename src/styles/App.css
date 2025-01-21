@@ -61,13 +61,13 @@ textarea {
 label {
   text-align: center;
   font-weight: var(--label-font-weight);
-  background-color: var(--input-background-color);
   padding: var(--label-padding);
   font-size: var(--label-font-size);
   left: var(--label-left);
   bottom: var(--label-bottom);
   transition: all 0.3s ease-in;
   position: absolute;
+  border-radius: 5px;
 }
 
 .textareaLabel {

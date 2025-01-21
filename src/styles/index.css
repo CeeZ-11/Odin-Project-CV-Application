@@ -206,6 +206,9 @@ button {
     color: var(--button-color);
     border-radius: var(--button-border-radius);
   }
+  label {
+    background-color: var(--input-background-color);
+  }
 }
 
 /* Responsive Design with Media Queries */
