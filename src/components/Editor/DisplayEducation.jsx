@@ -1,3 +1,5 @@
+import DisplayEducationForm from "./DisplayEducationForm";
+
 export default function DisplayEducation({
   id,
   school,
@@ -26,7 +28,7 @@ export default function DisplayEducation({
       )}
 
       {!display && (
-        <DisplayAchievementsForm
+        <DisplayEducationForm
           id={id}
           school={school}
           degree={degree}
@@ -34,9 +36,6 @@ export default function DisplayEducation({
           date={date}
           end_date={end_date}
           description={description}
-          display={display}
-          removeEducation={removeEducation}
-          changeDisplay={changeDisplay}
           handleInputChange={handleInputChange}
           changeFormDisplay={changeFormDisplay}
         />
