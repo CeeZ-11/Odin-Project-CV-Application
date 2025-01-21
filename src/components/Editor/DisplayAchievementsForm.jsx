@@ -79,7 +79,7 @@ export default function DisplayAchievementsForm({
           className="achievements-btn"
           onClick={() => changeFormDisplay(id)}
         >
-          Cancel
+          Close
         </button>
       </form>
     </>
