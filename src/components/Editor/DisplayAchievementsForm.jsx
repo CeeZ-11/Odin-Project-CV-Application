@@ -73,7 +73,9 @@ export default function DisplayAchievementsForm({
           />
           <label htmlFor="endDate">End Date</label>
         </div>
-        <button className="achievements-btn"> Cancel </button>
+        <button type="button" className="achievements-btn">
+          Cancel
+        </button>
       </form>
     </>
   );

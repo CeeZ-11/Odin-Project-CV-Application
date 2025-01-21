@@ -146,6 +146,12 @@ li input {
   grid-column: span 2;
 }
 
+.achievements-btn {
+  width: 3rem;
+  margin-left: 0.5rem;
+  border-radius: 0%;
+}
+
 @media (max-width: 1200px) {
   .personal-details {
     grid-template-columns: 1fr;
