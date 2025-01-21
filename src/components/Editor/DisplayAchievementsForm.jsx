@@ -18,7 +18,7 @@ export default function DisplayAchievementsForm({
             id="title"
             pattern="^[^0-9]+$"
             maxLength="100"
-            value={title || null}
+            value={title || ""}
             onChange={(e) => handleInputChange(id, "title", e.target.value)}
             required
           />
@@ -31,7 +31,7 @@ export default function DisplayAchievementsForm({
             id="description"
             pattern="^[^0-9]+$"
             maxLength="100"
-            value={description || null}
+            value={description || ""}
             onChange={(e) =>
               handleInputChange(id, "description", e.target.value)
             }
@@ -46,7 +46,7 @@ export default function DisplayAchievementsForm({
             id="result"
             pattern="^[^0-9]+$"
             maxLength="100"
-            value={result || null}
+            value={result || ""}
             onChange={(e) => handleInputChange(id, "result", e.target.value)}
             required
           />
@@ -58,7 +58,7 @@ export default function DisplayAchievementsForm({
             name="date"
             id="date"
             onChange={(e) => handleInputChange(id, "date", e.target.value)}
-            value={date}
+            value={date || ""}
             required
           />
           <label htmlFor="date">Date</label>
@@ -69,7 +69,7 @@ export default function DisplayAchievementsForm({
             name="endDate"
             id="endDate"
             onChange={(e) => handleInputChange(id, "end_date", e.target.value)}
-            value={end_date}
+            value={end_date || ""}
             required
           />
           <label htmlFor="endDate">End Date</label>
