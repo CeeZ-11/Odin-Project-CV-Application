@@ -1,4 +1,5 @@
 import { useState } from "react";
+import DisplayExperience from "./DisplayExperience";
 
 const experienceList = [
   {
