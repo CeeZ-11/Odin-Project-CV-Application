@@ -3,6 +3,7 @@ main {
   height: 100vh;
   display: grid;
   grid-template: 1fr / repeat(2, 1fr);
+  overflow-x: hidden;
 }
 
 .editor {
@@ -14,12 +15,19 @@ main {
 .resume {
   display: grid;
   grid-template: auto 1fr / 1fr;
+  background-color: rgb(75, 75, 75);
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  width: 50vw;
 }
 
 .resume-container {
-  display: grid;
-  grid-template: 1fr / repeat(2, 1fr);
-  margin: 1rem 8rem;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 7rem;
+  background-color: white;
+  align-items: center;
 }
 
 .grey-line {
@@ -179,6 +187,21 @@ li input {
   grid-column: span 2;
 }
 
+.resume > h1 {
+  color: white;
+  text-align: center;
+  background-color: rgb(17, 17, 17);
+  padding: 1rem;
+}
+
+.resume-head {
+  flex: 0.5;
+}
+.resume-body {
+  flex: 1;
+  display: flex;
+}
+
 @media (max-width: 1200px) {
   .personal-details {
     grid-template-columns: 1fr;
@@ -188,8 +211,28 @@ li input {
   }
 }
 
-@media (max-width: 805px) {
+@media (max-width: 1035px) {
   main {
     grid-template: 1fr / 1fr;
+  }
+  .resume {
+    position: relative;
+    width: 100vw;
+  }
+}
+
+@media (max-width: 1620px) {
+  .editor {
+    margin: 2rem 2rem;
+  }
+  .resume-container {
+    margin: 1rem 2rem;
+  }
+}
+
+@media (min-width: 10px) and (max-width: 270px) {
+  .resume {
+    position: relative;
+    width: 100%;
   }
 }

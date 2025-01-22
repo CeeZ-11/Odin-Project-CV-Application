@@ -17,10 +17,14 @@ export default function App() {
         <Experience />
       </div>
       <div className="resume">
-        <h1>Resume Output</h1>
+        <h1>Resume</h1>
         <div className="resume-container">
-          <div className="aside">Aside Section</div>
-          <div className="main">Main Section</div>
+          <div className="resume-head">Header Section</div>
+          <div className="resume-body">
+            <div className="aside">Aside Section</div>
+            <div className="main">Main Section</div>
+          </div>
+          <div className="resume-foot">Footer Section</div>
         </div>
       </div>
     </main>
