@@ -1,0 +1,29 @@
+.resume-head {
+  display: flex;
+}
+
+.head-profile-pic {
+  flex: 0.6;
+  padding: 2rem 0 2rem 2rem;
+}
+
+.head-profile-header {
+  flex: 1;
+}
+
+.profile-button {
+  background-image: url("./assets/profile-circle-svgrepo-com.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: auto;
+  width: 20vw;
+  height: 20vw;
+  max-width: 150px; /* Set a maximum width */
+  max-height: 150px;
+  border-radius: 50%;
+  border: none;
+}
+
+.profile-button:hover {
+  transform: scale(1);
+}

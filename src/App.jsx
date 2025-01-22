@@ -3,6 +3,7 @@ import Education from "./components/Editor/Education";
 import Experience from "./components/Editor/Experience";
 import Personal from "./components/Editor/Personal";
 import Skills from "./components/Editor/Skills";
+import Head from "./components/Resume/Head";
 import "./styles/App.css";
 
 export default function App() {
@@ -19,7 +20,7 @@ export default function App() {
       <div className="resume">
         <h1>Resume</h1>
         <div className="resume-container">
-          <div className="resume-head">Header Section</div>
+          <Head />
           <div className="resume-body">
             <div className="aside">Aside Section</div>
             <div className="main">Main Section</div>

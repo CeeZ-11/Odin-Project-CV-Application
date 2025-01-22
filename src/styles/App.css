@@ -13,21 +13,28 @@ main {
 }
 
 .resume {
-  display: grid;
-  grid-template: auto 1fr / 1fr;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: rgb(75, 75, 75);
   height: 100vh;
   position: fixed;
   right: 0;
   width: 50vw;
+  overflow: hidden;
 }
 
 .resume-container {
   display: flex;
   flex-direction: column;
-  margin: 1rem 4rem;
+  margin: 1rem 0;
   background-color: white;
   align-items: center;
+  width: 60%;
+  max-width: 500px;
+  min-height: 720px;
+  height: 100%;
+  justify-content: center;
 }
 
 .grey-line {
@@ -192,10 +199,12 @@ li input {
   text-align: center;
   background-color: rgb(17, 17, 17);
   padding: 1rem;
+  width: 100%;
 }
 
 .resume-head {
   flex: 0.5;
+  width: 100%;
 }
 .resume-body {
   flex: 1;
@@ -211,22 +220,13 @@ li input {
   }
 }
 
-@media (max-width: 1035px) {
+@media (max-width: 1500px) {
   main {
     grid-template: 1fr / 1fr;
   }
   .resume {
     position: relative;
     width: 100vw;
-  }
-}
-
-@media (max-width: 1620px) {
-  .editor {
-    margin: 2rem 2rem;
-  }
-  .resume-container {
-    margin: 1rem 2rem;
   }
 }
 
