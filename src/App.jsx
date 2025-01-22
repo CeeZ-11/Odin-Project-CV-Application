@@ -4,6 +4,7 @@ import Experience from "./components/Editor/Experience";
 import Personal from "./components/Editor/Personal";
 import Skills from "./components/Editor/Skills";
 import Head from "./components/Resume/Head";
+import Main from "./components/Resume/Main";
 import "./styles/App.css";
 
 export default function App() {
@@ -21,11 +22,8 @@ export default function App() {
         <h1>Resume</h1>
         <div className="resume-container">
           <Head />
-          <div className="resume-body">
-            <div className="aside">Aside Section</div>
-            <div className="main">Main Section</div>
-          </div>
-          <div className="resume-foot">Footer Section</div>
+          <Main />
+          <div className="resume-foot"></div>
         </div>
       </div>
     </main>

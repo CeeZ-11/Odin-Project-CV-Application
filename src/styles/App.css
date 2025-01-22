@@ -31,7 +31,7 @@ main {
   background-color: white;
   align-items: center;
   width: 60%;
-  max-width: 550px;
+  width: 550px;
   min-height: 720px;
   height: 100%;
   justify-content: center;
@@ -203,12 +203,17 @@ li input {
 }
 
 .resume-head {
-  flex: 0.5;
+  flex: 0.4;
   width: 100%;
 }
 .resume-body {
   flex: 1;
   display: flex;
+}
+
+.resume-foot {
+  flex: 0.1;
+  width: 100%;
 }
 
 @media (max-width: 1200px) {

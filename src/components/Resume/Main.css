@@ -1,0 +1,70 @@
+.resume-body {
+  display: flex;
+  width: 100%;
+}
+
+.aside {
+  flex: 0.35;
+  padding: 0rem 2rem 0 2rem;
+}
+
+.main {
+  flex: 0.65;
+  padding: 0rem 2rem 0 2rem;
+}
+
+.aside h3:nth-child(1),
+.main h3:nth-child(1) {
+  margin-top: 0;
+}
+
+.resume-body p {
+  font-size: 0.5rem;
+}
+
+.resume-body li {
+  display: list-item;
+  font-size: 0.5rem;
+  text-decoration: dashed;
+  list-style-type: circle;
+}
+
+.resume-body ul {
+  display: flex;
+  gap: 0;
+  padding-left: 1rem;
+}
+
+.resume-body h3 {
+  font-size: 0.8rem;
+}
+
+.resume-body h4 {
+  font-size: 0.7rem;
+}
+
+.resume-body h5 {
+  font-size: 0.58rem;
+  font-weight: normal;
+}
+
+.resume-grey-line {
+  margin-top: 25px;
+}
+
+.main-grey-line {
+  max-width: 270px;
+}
+
+.aside-grey-line {
+  max-width: 145px;
+}
+
+.main-grey-line,
+.aside-grey-line {
+  margin: 10px 0;
+}
+
+.main ul {
+  margin: 5px 0 10px 0;
+}
