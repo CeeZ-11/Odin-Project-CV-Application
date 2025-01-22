@@ -3,12 +3,36 @@
 }
 
 .head-profile-pic {
-  flex: 0.6;
-  padding: 2rem 0 2rem 2rem;
+  flex: 0.3;
+  padding: 2rem 0 1rem 1rem;
+  display: flex;
 }
 
 .head-profile-header {
-  flex: 1;
+  flex: 0.7;
+  padding: 4rem 0 1rem 1rem;
+}
+
+.head-profile-header h2 {
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+.head-profile-header h4 {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.head-profile-header p {
+  font-size: 0.7rem;
+}
+
+.head-details {
+  line-height: 1.8;
+  display: flex;
+  gap: 5px;
+  align-items: center;
 }
 
 .profile-button {
@@ -16,12 +40,30 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: auto;
-  width: 20vw;
-  height: 20vw;
-  max-width: 150px; /* Set a maximum width */
-  max-height: 150px;
+  width: 25vw;
+  height: 25vw;
+  max-width: 200px; /* Set a maximum width */
+  max-height: 200px;
   border-radius: 50%;
   border: none;
+}
+
+.head-phone {
+  background-image: url("./assets/phone.svg");
+  width: 15px;
+  height: 15px;
+}
+
+.head-email {
+  background-image: url("./assets/email.svg");
+  width: 15px;
+  height: 15px;
+}
+
+.head-website {
+  background-image: url("./assets/web.svg");
+  width: 15px;
+  height: 15px;
 }
 
 .profile-button:hover {
