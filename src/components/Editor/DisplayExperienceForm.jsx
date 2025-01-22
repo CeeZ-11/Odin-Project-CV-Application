@@ -59,6 +59,21 @@ export default function DisplayExperienceForm({
           />
           <label htmlFor="employment_type">Employment Type</label>
         </div>
+        <div className="comment experience-work_arrangement">
+          <input
+            type="text"
+            name="work_arrangement"
+            id="work_arrangement"
+            pattern="^[^0-9]+$"
+            maxLength="500"
+            value={work_arrangement || ""}
+            onChange={(e) =>
+              handleExpInputChange(id, "work_arrangement", e.target.value)
+            }
+            required
+          />
+          <label htmlFor="work_arrangement">Work Arrangement</label>
+        </div>
         <div className="comment experience-date">
           <input
             type="month"
@@ -98,23 +113,9 @@ export default function DisplayExperienceForm({
           />
           <label htmlFor="location">Location</label>
         </div>
-        <div className="comment experience-work_arrangement">
-          <input
-            type="text"
-            name="work_arrangement"
-            id="work_arrangement"
-            pattern="^[^0-9]+$"
-            maxLength="500"
-            value={work_arrangement || ""}
-            onChange={(e) =>
-              handleExpInputChange(id, "work_arrangement", e.target.value)
-            }
-            required
-          />
-          <label htmlFor="work_arrangement">Work Arrangement</label>
-        </div>
+
         <div className="comment experience-description">
-          <input
+          <textarea
             type="text"
             name="description"
             id="description"
@@ -126,7 +127,9 @@ export default function DisplayExperienceForm({
             }
             required
           />
-          <label htmlFor="description">Description</label>
+          <label htmlFor="description" className="textareaLabel">
+            Description
+          </label>
         </div>
         <button
           type="button"

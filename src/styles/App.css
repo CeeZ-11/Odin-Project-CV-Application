@@ -8,7 +8,7 @@ main {
 .editor {
   display: flex;
   flex-direction: column;
-  margin: 2rem 6rem 0;
+  margin: 2rem 6rem;
 }
 
 .resume {
@@ -117,13 +117,17 @@ li input {
   flex: 1;
 }
 
-.achievements-container {
+.achievements-container,
+.education-container,
+.experience-container {
   border: 1px solid black;
   border-radius: 10px;
   padding: 1rem;
 }
 
-.achievements-li {
+.achievements-li,
+.education-li,
+.experience-li {
   display: flex;
   justify-content: space-between;
 }
@@ -133,7 +137,9 @@ li input {
   gap: 5px;
 }
 
-.achievement-details {
+.achievement-details,
+.education-details,
+.experience-details {
   flex: 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -146,47 +152,31 @@ li input {
   grid-column: span 2;
 }
 
-.achievements-btn {
+.achievements-btn,
+.education-btn,
+.experience-btn {
   width: 3rem;
   margin-left: 0.5rem;
   border-radius: 0%;
 }
 
-.education-container {
-  border: 1px solid black;
-  border-radius: 10px;
-  padding: 1rem;
-}
-
-.education-li {
-  display: flex;
-  justify-content: space-between;
-}
-
-.education-btn-div {
+.education-btn-div,
+.experience-btn-div {
   display: flex;
   gap: 5px;
-}
-
-.education-details {
-  flex: 1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.5rem;
 }
 
 .education-school,
 .education-degree,
 .education-city,
 .education-description,
-.education-result {
+.education-result,
+.experience-job_title,
+.experience-location,
+.experience-employer,
+.experience-description,
+.experience-result {
   grid-column: span 2;
-}
-
-.education-btn {
-  width: 3rem;
-  margin-left: 0.5rem;
-  border-radius: 0%;
 }
 
 @media (max-width: 1200px) {

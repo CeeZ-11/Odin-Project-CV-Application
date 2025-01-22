@@ -80,7 +80,7 @@ export default function DisplayEducationForm({
           <label htmlFor="endDate">End Date</label>
         </div>
         <div className="comment education-description">
-          <input
+          <textarea
             type="text"
             name="description"
             id="description"
@@ -92,7 +92,9 @@ export default function DisplayEducationForm({
             }
             required
           />
-          <label htmlFor="description">Description</label>
+          <label htmlFor="description" className="textareaLabel">
+            Description
+          </label>
         </div>
         <button
           type="button"
