@@ -50,7 +50,7 @@ export default function DisplayExperienceForm({
             name="employment_type"
             id="employment_type"
             pattern="^[^0-9]+$"
-            maxLength="100"
+            maxLength="30"
             value={employment_type || ""}
             onChange={(e) =>
               handleExpInputChange(id, "employment_type", e.target.value)
@@ -65,7 +65,7 @@ export default function DisplayExperienceForm({
             name="work_arrangement"
             id="work_arrangement"
             pattern="^[^0-9]+$"
-            maxLength="500"
+            maxLength="30"
             value={work_arrangement || ""}
             onChange={(e) =>
               handleExpInputChange(id, "work_arrangement", e.target.value)
@@ -104,7 +104,7 @@ export default function DisplayExperienceForm({
             name="location"
             id="location"
             pattern="^[^0-9]+$"
-            maxLength="500"
+            maxLength="100"
             value={location || ""}
             onChange={(e) =>
               handleExpInputChange(id, "location", e.target.value)
@@ -120,7 +120,7 @@ export default function DisplayExperienceForm({
             name="description"
             id="description"
             pattern="^[^0-9]+$"
-            maxLength="500"
+            maxLength="200"
             value={description || ""}
             onChange={(e) =>
               handleExpInputChange(id, "description", e.target.value)

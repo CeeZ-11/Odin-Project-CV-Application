@@ -2,7 +2,6 @@ export default function DisplayEducationForm({
   id,
   school,
   degree,
-  city,
   date,
   end_date,
   description,
@@ -42,19 +41,6 @@ export default function DisplayEducationForm({
           />
           <label htmlFor="degree">Degree</label>
         </div>
-        <div className="comment education-city">
-          <input
-            type="text"
-            name="city"
-            id="city"
-            pattern="^[^0-9]+$"
-            maxLength="100"
-            value={city || ""}
-            onChange={(e) => handleEducInputChange(id, "city", e.target.value)}
-            required
-          />
-          <label htmlFor="city">City</label>
-        </div>
         <div className="comment education-date">
           <input
             type="month"
@@ -85,7 +71,7 @@ export default function DisplayEducationForm({
             name="description"
             id="description"
             pattern="^[^0-9]+$"
-            maxLength="500"
+            maxLength="200"
             value={description || ""}
             onChange={(e) =>
               handleEducInputChange(id, "description", e.target.value)

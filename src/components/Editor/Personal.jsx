@@ -1,29 +1,4 @@
-import { useState } from "react";
-
-const personalList = [
-  {
-    fName: "James",
-    lName: "Denver",
-    occupation: "Frontend Developer",
-    phone: "(+54) 9 2706 64116",
-    email: "james@gmail.com",
-    portfolio: "portfolio@example.com",
-    address: "123 Main Street, City, Country",
-    profile:
-      "Motivated and detail-oriented professional with a passion for delivering high-quality work. Equipped with strong problem-solving skills, a commitment to continuous learning, and the ability to adapt to new challenges. Dedicated to achieving results through collaboration, efficiency, and innovation. Seeking an opportunity to contribute to organizational success while growing professionally.",
-  },
-];
-
-export default function Personal() {
-  const [personal, setPersonal] = useState(personalList[0]);
-
-  const handleInputChange = (field, value) => {
-    setPersonal((prevPersonal) => ({
-      ...prevPersonal,
-      [field]: value,
-    }));
-  };
-
+export default function Personal({ personal, handlePersonalInputChange }) {
   return (
     <>
       <h3>Personal Details</h3>
@@ -38,7 +13,7 @@ export default function Personal() {
             pattern="^[^0-9]+$"
             maxLength="25"
             placeholder="James"
-            onChange={(e) => handleInputChange("fName", e.target.value)}
+            onChange={(e) => handlePersonalInputChange("fName", e.target.value)}
             required
           />
           <label htmlFor="fName">First Name</label>
@@ -52,7 +27,7 @@ export default function Personal() {
             pattern="^[^0-9]+$"
             maxLength="25"
             placeholder="Denver"
-            onChange={(e) => handleInputChange("lName", e.target.value)}
+            onChange={(e) => handlePersonalInputChange("lName", e.target.value)}
             required
           />
           <label htmlFor="lName">Last Name</label>
@@ -66,7 +41,9 @@ export default function Personal() {
             pattern="^[^0-9]+$"
             maxLength="25"
             placeholder="Full Stack Developer"
-            onChange={(e) => handleInputChange("occupation", e.target.value)}
+            onChange={(e) =>
+              handlePersonalInputChange("occupation", e.target.value)
+            }
             required
           />
           <label htmlFor="occupation">Occupation</label>
@@ -80,7 +57,7 @@ export default function Personal() {
             pattern="\(\+54\) 9 [0-9]{4} [0-9]{5}"
             maxLength="25"
             placeholder="(+54) 9 2706 64116"
-            onChange={(e) => handleInputChange("phoneNumber", e.target.value)}
+            onChange={(e) => handlePersonalInputChange("phone", e.target.value)}
             required
           />
           <label htmlFor="phoneNumber">Phone</label>
@@ -93,7 +70,7 @@ export default function Personal() {
             value={personal.email}
             maxLength="25"
             placeholder="james@gmail.com"
-            onChange={(e) => handleInputChange("profEmail", e.target.value)}
+            onChange={(e) => handlePersonalInputChange("email", e.target.value)}
             required
           />
           <label htmlFor="profEmail">Email</label>
@@ -106,7 +83,9 @@ export default function Personal() {
             value={personal.portfolio}
             maxLength="25"
             placeholder="portfolio@example.com"
-            onChange={(e) => handleInputChange("portfolio", e.target.value)}
+            onChange={(e) =>
+              handlePersonalInputChange("portfolio", e.target.value)
+            }
             required
           />
           <label htmlFor="portfolio">Portfolio</label>
@@ -119,7 +98,9 @@ export default function Personal() {
             value={personal.address}
             maxLength="50"
             placeholder="123 Main Street, City, Country"
-            onChange={(e) => handleInputChange("address", e.target.value)}
+            onChange={(e) =>
+              handlePersonalInputChange("address", e.target.value)
+            }
             required
           />
           <label htmlFor="address">Address</label>
@@ -129,9 +110,11 @@ export default function Personal() {
             id="profile"
             value={personal.profile}
             name="profile"
-            maxLength="350"
+            maxLength="400"
             placeholder="Motivated and detail-oriented professional with a passion for delivering high-quality work. Equipped with strong problem-solving skills, a commitment to continuous learning, and the ability to adapt to new challenges. Dedicated to achieving results through collaboration, efficiency, and innovation. Seeking an opportunity to contribute to organizational success while growing professionally."
-            onChange={(e) => handleInputChange("profile", e.target.value)}
+            onChange={(e) =>
+              handlePersonalInputChange("profile", e.target.value)
+            }
             required
           ></textarea>
           <label htmlFor="profile" className="textareaLabel">

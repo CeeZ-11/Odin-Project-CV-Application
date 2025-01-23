@@ -4,7 +4,6 @@ export default function DisplayEducation({
   id,
   school,
   degree,
-  city,
   date,
   end_date,
   description,
@@ -32,7 +31,6 @@ export default function DisplayEducation({
           id={id}
           school={school}
           degree={degree}
-          city={city}
           date={date}
           end_date={end_date}
           description={description}

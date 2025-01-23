@@ -5,8 +5,8 @@ export default function DisplayAchievementsForm({
   result,
   date,
   end_date,
-  handleInputChange,
-  changeFormDisplay,
+  handleAchievementInputChange,
+  changeAchievementFormDisplay,
 }) {
   return (
     <>
@@ -19,7 +19,9 @@ export default function DisplayAchievementsForm({
             pattern="^[^0-9]+$"
             maxLength="100"
             value={title || ""}
-            onChange={(e) => handleInputChange(id, "title", e.target.value)}
+            onChange={(e) =>
+              handleAchievementInputChange(id, "title", e.target.value)
+            }
             required
           />
           <label htmlFor="title">Title</label>
@@ -33,7 +35,7 @@ export default function DisplayAchievementsForm({
             maxLength="100"
             value={description || ""}
             onChange={(e) =>
-              handleInputChange(id, "description", e.target.value)
+              handleAchievementInputChange(id, "description", e.target.value)
             }
             required
           />
@@ -47,7 +49,9 @@ export default function DisplayAchievementsForm({
             pattern="^[^0-9]+$"
             maxLength="100"
             value={result || ""}
-            onChange={(e) => handleInputChange(id, "result", e.target.value)}
+            onChange={(e) =>
+              handleAchievementInputChange(id, "result", e.target.value)
+            }
             required
           />
           <label htmlFor="result">Result</label>
@@ -57,7 +61,9 @@ export default function DisplayAchievementsForm({
             type="month"
             name="date"
             id="date"
-            onChange={(e) => handleInputChange(id, "date", e.target.value)}
+            onChange={(e) =>
+              handleAchievementInputChange(id, "date", e.target.value)
+            }
             value={date || ""}
             required
           />
@@ -68,7 +74,9 @@ export default function DisplayAchievementsForm({
             type="month"
             name="endDate"
             id="endDate"
-            onChange={(e) => handleInputChange(id, "end_date", e.target.value)}
+            onChange={(e) =>
+              handleAchievementInputChange(id, "end_date", e.target.value)
+            }
             value={end_date || ""}
             required
           />
@@ -77,7 +85,7 @@ export default function DisplayAchievementsForm({
         <button
           type="button"
           className="achievements-btn"
-          onClick={() => changeFormDisplay(id)}
+          onClick={() => changeAchievementFormDisplay(id)}
         >
           Close
         </button>

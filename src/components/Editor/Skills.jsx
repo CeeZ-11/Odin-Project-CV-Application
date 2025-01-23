@@ -1,33 +1,9 @@
-import { useState } from "react";
-
-const skillsSet = [
-  { id: 0, name: "Attention to detail" },
-  { id: 1, name: "Creative thinking" },
-  { id: 2, name: "Teamwork" },
-];
-export default function Skills() {
-  const [skills, setSkills] = useState(skillsSet);
-
-  const removeSkills = (id) => {
-    const updatedSkills = skills
-      .filter((skill) => skill.id !== id)
-      .map((skill, index) => ({
-        ...skill,
-        id: index,
-      }));
-    setSkills(updatedSkills);
-  };
-
-  const addSkills = () => {
-    setSkills([
-      ...skills,
-      {
-        id: skills.length,
-        name: "",
-      },
-    ]);
-  };
-
+export default function Skills({
+  skills,
+  removeSkills,
+  addSkills,
+  handleSkillsInputChange,
+}) {
   return (
     <>
       <div className="titles skillsTitle">
@@ -47,9 +23,13 @@ export default function Skills() {
                   type="text"
                   name="skills"
                   id={`skills ${skill.id}`}
+                  value={skill.name}
                   pattern="^[^0-9]+$"
                   maxLength="25"
                   placeholder={skill.name}
+                  onChange={(e) =>
+                    handleSkillsInputChange(skill.id, e.target.value)
+                  }
                   required
                 />
                 <label htmlFor={`skills ${skill.id}`}>

@@ -8,9 +8,9 @@ export default function DisplayAchievements({
   end_date,
   display,
   removeAchievements,
-  changeDisplay,
-  handleInputChange,
-  changeFormDisplay,
+  changeAchievementDisplay,
+  handleAchievementInputChange,
+  changeAchievementFormDisplay,
 }) {
   return (
     <>
@@ -31,15 +31,15 @@ export default function DisplayAchievements({
           result={result}
           date={date}
           end_date={end_date}
-          handleInputChange={handleInputChange}
-          changeFormDisplay={changeFormDisplay}
+          handleAchievementInputChange={handleAchievementInputChange}
+          changeAchievementFormDisplay={changeAchievementFormDisplay}
         />
       )}
 
       <div className="achievements-btn-div">
         <button
           type="button"
-          onClick={() => changeDisplay(id)}
+          onClick={() => changeAchievementDisplay(id)}
           className="achievements-btn"
         >
           Edit

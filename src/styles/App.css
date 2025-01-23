@@ -35,6 +35,7 @@ main {
   min-height: 720px;
   height: 100%;
   justify-content: center;
+  overflow: hidden;
 }
 
 .grey-line {
@@ -214,6 +215,11 @@ li input {
 .resume-foot {
   flex: 0.1;
   width: 100%;
+}
+
+.aside,
+.main {
+  overflow: hidden;
 }
 
 @media (max-width: 1200px) {
