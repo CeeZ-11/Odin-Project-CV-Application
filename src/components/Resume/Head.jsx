@@ -1,9 +1,9 @@
 import "./Head.css";
-export default function Head({ personal }) {
+export default function Head({ personal, file }) {
   return (
     <div className="resume-head">
       <div className="head-profile-pic">
-        <button className="profile-button"></button>
+        <img className="profile-button" src={file} alt="" />
       </div>
 
       <div className="head-profile-header">

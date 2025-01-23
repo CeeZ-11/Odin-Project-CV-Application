@@ -1,4 +1,8 @@
-export default function Personal({ personal, handlePersonalInputChange }) {
+export default function Personal({
+  personal,
+  handlePersonalInputChange,
+  handleChange,
+}) {
   return (
     <>
       <h3>Personal Details</h3>
@@ -120,6 +124,10 @@ export default function Personal({ personal, handlePersonalInputChange }) {
           <label htmlFor="profile" className="textareaLabel">
             Profile
           </label>
+        </div>
+        <div className="comment imgUpload wideSpan">
+          <h2>Add Image:</h2>
+          <input type="file" onChange={handleChange} />
         </div>
       </form>
     </>

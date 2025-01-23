@@ -222,6 +222,15 @@ li input {
   overflow: hidden;
 }
 
+.imgUpload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
 @media (max-width: 1200px) {
   .personal-details {
     grid-template-columns: 1fr;

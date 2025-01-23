@@ -4,8 +4,8 @@
 
 .head-profile-pic {
   flex: 0.3;
-  padding: 1rem 0 0rem 1rem;
   display: flex;
+  padding: 35px;
 }
 
 .head-profile-header {
@@ -35,17 +35,17 @@
   align-items: center;
 }
 
-.profile-button {
-  background-image: url("./assets/profile-circle-svgrepo-com.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: auto;
-  width: 25vw;
-  height: 25vw;
-  max-width: 200px; /* Set a maximum width */
-  max-height: 200px;
+img {
+  background-image: url("./assets/profile-circle-svgrepo-com.png");
+  background-size: cover;
+  background-position: center;
+  width: 20vw;
+  height: 20vw;
+  max-width: 150px; /* Set a maximum width */
+  max-height: 150px;
   border-radius: 50%;
   border: none;
+  padding: 0;
 }
 
 .head-phone {

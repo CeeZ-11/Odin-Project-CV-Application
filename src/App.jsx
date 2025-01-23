@@ -78,12 +78,19 @@ const experienceList = [
     display: true,
   },
 ];
+
 export default function App() {
   const [personal, setPersonal] = useState(personalList[0]);
   const [skills, setSkills] = useState(skillsSet);
   const [achievements, setAchievements] = useState(achievementsList);
   const [education, setEducation] = useState(educationList);
   const [experience, setExperience] = useState(experienceList);
+  const [file, setFile] = useState();
+
+  function handleChange(e) {
+    console.log(e.target.files);
+    setFile(URL.createObjectURL(e.target.files[0]));
+  }
 
   const handlePersonalInputChange = (field, value) => {
     setPersonal((prevPersonal) => ({
@@ -332,6 +339,7 @@ export default function App() {
         <Personal
           personal={personal}
           handlePersonalInputChange={handlePersonalInputChange}
+          handleChange={handleChange}
         />
         <Skills
           skills={skills}
@@ -367,7 +375,7 @@ export default function App() {
       <div className="resume">
         <h1>Resume</h1>
         <div className="resume-container">
-          <Head personal={personal} />
+          <Head personal={personal} file={file} />
           <Main
             personal={personal}
             skills={skills}
