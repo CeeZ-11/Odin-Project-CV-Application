@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     name: Build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04 # Specify a specific Ubuntu version to avoid unexpected upgrades
 
     steps:
       - name: Checkout repo
@@ -16,6 +16,8 @@ jobs:
 
       - name: Setup Node
         uses: actions/setup-node@v3
+        with:
+          node-version: 16 # Specify Node.js version to match your project requirements
 
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
@@ -24,7 +26,7 @@ jobs:
         run: npm run build
 
       - name: Upload production-ready build files
-        uses: actions/upload-artifact@v3.1.1
+        uses: actions/upload-artifact@v3.2.0 # Use the latest version
         with:
           name: production-files
           path: ./dist
@@ -32,7 +34,8 @@ jobs:
   deploy:
     name: Deploy
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04 # Specify a specific Ubuntu version
+
     if: github.ref == 'refs/heads/main'
 
     steps:
