@@ -12,12 +12,6 @@ main {
   margin: 2rem 6rem;
 }
 
-.editor > h1 {
-  background-color: #1f2d3d;
-  color: white;
-  padding: 1rem;
-}
-
 .editor h3 {
   padding-left: 1rem;
 }
@@ -40,10 +34,8 @@ main {
   margin: 1rem 0;
   background-color: white;
   align-items: center;
-  width: 60%;
   width: 550px;
-  min-height: 720px;
-  height: 100%;
+  height: 100vh;
   justify-content: center;
   overflow: hidden;
 }
@@ -284,6 +276,52 @@ li input {
   .resume {
     position: relative;
     width: 100vw;
+  }
+}
+
+@media (max-width: 750px) {
+  img {
+    width: clamp(30vw, 1.5vw, 40vw);
+    height: clamp(30vw, 1.5vw, 40vw);
+  }
+}
+
+@media (max-width: 560px) {
+  .resume-container {
+    width: 95%;
+
+    overflow: hidden;
+  }
+
+  .resume-container h2 {
+    font-size: clamp(1rem, 1.5vw, 2rem);
+  }
+  .resume-body h3 {
+    font-size: clamp(0.6rem, 1.5vw, 1.9rem);
+  }
+  .resume-body h4 {
+    font-size: clamp(0.4rem, 2vw, 1.8rem);
+  }
+  .resume-body h5 {
+    font-size: clamp(0.4rem, 2vw, 1.6rem);
+  }
+  .head-profile-header h4 {
+    font-size: clamp(0.7rem, 2vw, 1.8rem);
+  }
+  .head-profile-header p {
+    font-size: clamp(0.5rem, 2vw, 1.5rem);
+  }
+
+  .resume-body p,
+  .resume-container li,
+  .resume-container label,
+  .resume-container input,
+  .resume-container textarea {
+    font-size: clamp(0.3rem, 1.5vw, 1rem);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    text-overflow: ellipsis;
   }
 }
 

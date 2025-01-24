@@ -197,6 +197,11 @@ button {
   .resume-container {
     color: #1f2d3d;
   }
+  .editor > h1 {
+    background-color: var(--dark-background);
+    color: white;
+    padding: 1rem;
+  }
 }
 
 @media (prefers-color-scheme: light) {
@@ -215,6 +220,12 @@ button {
   label {
     background-color: var(--input-background-color);
   }
+
+  .editor > h1 {
+    background-color: #1f2d3d;
+    color: white;
+    padding: 1rem;
+  }
 }
 
 /* Responsive Design with Media Queries */
@@ -223,15 +234,6 @@ button {
 @media (max-width: 420px) {
   body {
     font-size: 0.875rem; /* 14px */
-  }
-  p,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: 0 0.625rem; /* 10px */
   }
   img {
     width: 100%;
