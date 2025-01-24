@@ -35,9 +35,8 @@ main {
   background-color: white;
   align-items: center;
   width: 550px;
-  height: 100vh;
+  height: 740px;
   justify-content: center;
-  overflow: hidden;
 }
 
 .grey-line {
@@ -187,6 +186,13 @@ li input {
   border-radius: 0%;
 }
 
+.pdf-btn {
+  width: 4rem;
+  margin-left: 0.5rem;
+  border-radius: 0%;
+  font-size: 0.45rem;
+}
+
 .education-btn-div,
 .experience-btn-div {
   display: flex;
@@ -206,7 +212,11 @@ li input {
   grid-column: span 2;
 }
 
-.resume > h1 {
+.resume-header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
   color: white;
   text-align: center;
   background-color: rgb(17, 17, 17);
@@ -280,7 +290,7 @@ li input {
 }
 
 @media (max-width: 750px) {
-  img {
+  .profile-button {
     width: clamp(30vw, 1.5vw, 40vw);
     height: clamp(30vw, 1.5vw, 40vw);
   }
@@ -289,7 +299,6 @@ li input {
 @media (max-width: 560px) {
   .resume-container {
     width: 95%;
-
     overflow: hidden;
   }
 

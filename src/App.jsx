@@ -6,6 +6,10 @@ import Skills from "./components/Editor/Skills";
 import Head from "./components/Resume/Head";
 import Main from "./components/Resume/Main";
 import "./styles/App.css";
+import phoneIcon from "./components/Resume/assets/phone.svg";
+import emailIcon from "./components/Resume/assets/email.svg";
+import websiteIcon from "./components/Resume/assets/web.svg";
+import html2pdf from "html2pdf.js";
 import { useState } from "react";
 
 const personalList = [
@@ -332,10 +336,24 @@ export default function App() {
     setExperience(updatedExperience);
   };
 
+  const handleDownloadPDF = () => {
+    const element = document.querySelector(".resume-container");
+    const opt = {
+      margin: 0,
+      filename: "resume.pdf",
+      image: { type: "jpeg", quality: 1 },
+      html2canvas: { scale: 10, useCORS: true, logging: true },
+      jsPDF: { unit: "px", format: [550, 780], orientation: "portrait" },
+      pagebreak: { mode: ["avoid-all", "css", "legacy"] },
+    };
+    html2pdf().from(element).set(opt).save();
+  };
+
   return (
     <main>
       <div className="editor">
         <h1>Resume Editor</h1>
+
         <Personal
           personal={personal}
           handlePersonalInputChange={handlePersonalInputChange}
@@ -373,9 +391,20 @@ export default function App() {
         />
       </div>
       <div className="resume">
-        <h1>Resume</h1>
+        <div className="resume-header-container">
+          <h1>Resume</h1>
+          <button className="pdf-btn" onClick={handleDownloadPDF}>
+            Download PDF
+          </button>
+        </div>
         <div className="resume-container">
-          <Head personal={personal} file={file} />
+          <Head
+            personal={personal}
+            file={file}
+            phoneIcon={phoneIcon}
+            emailIcon={emailIcon}
+            websiteIcon={websiteIcon}
+          />
           <Main
             personal={personal}
             skills={skills}

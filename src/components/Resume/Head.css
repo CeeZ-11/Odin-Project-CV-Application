@@ -21,11 +21,16 @@
 .head-profile-header h4 {
   font-size: 1rem;
   font-weight: normal;
-  margin-bottom: 10px;
 }
 
 .head-profile-header p {
   font-size: 0.7rem;
+}
+
+.head-details img {
+  margin-right: 0.5rem; /* Add space between icon and text */
+  vertical-align: middle; /* Align icon vertically with text */
+  display: inline-block;
 }
 
 .head-details {
@@ -35,7 +40,7 @@
   align-items: center;
 }
 
-img {
+.profile-button {
   background-image: url("./assets/profile-circle-svgrepo-com.png");
   background-size: cover;
   background-position: center;
@@ -49,19 +54,16 @@ img {
 }
 
 .head-phone {
-  background-image: url("./assets/phone.svg");
   width: 15px;
   height: 15px;
 }
 
 .head-email {
-  background-image: url("./assets/email.svg");
   width: 15px;
   height: 15px;
 }
 
 .head-website {
-  background-image: url("./assets/web.svg");
   width: 15px;
   height: 15px;
 }
