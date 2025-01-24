@@ -231,6 +231,14 @@ li input {
   height: 100%;
 }
 
+.personal-details,
+.skillsList,
+.achievements-ul,
+.education-ul,
+.experience-ul {
+  margin-bottom: 1.5rem;
+}
+
 @media (max-width: 1200px) {
   .personal-details {
     grid-template-columns: 1fr;
