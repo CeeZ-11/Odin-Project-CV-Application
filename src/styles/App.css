@@ -301,6 +301,9 @@ li input {
     width: 95%;
     overflow: hidden;
   }
+  .editor {
+    margin: 0;
+  }
 
   .resume-container h2 {
     font-size: clamp(1rem, 1.5vw, 2rem);
