@@ -1,7 +1,7 @@
 :root {
   /* Light Theme Colors */
   --light-background: #f9f9f9;
-  --light-text: #333;
+  --light-text: #1f2d3d;
   --light-link: #007bff;
   --light-button: #007bff;
 
@@ -24,7 +24,7 @@
   --input-padding: 0.5rem 0.8rem 0.3rem 0.8rem;
   --input-margin: 0.2rem 0.5rem;
   --input-font-size: 1rem;
-  --input-background-color: rgb(255, 255, 255);
+  --input-background-color: #f3f5f8;
   --input-border-radius: 5px;
 
   /* Label */
@@ -37,11 +37,11 @@
   --label-textArea-bottom: 8.5rem;
 
   /* Input and TextAread border */
-  --input-and-textArea-border: 1px solid black;
+  --input-and-textArea-border: 1px solid #d1d9e6;
 
   /* Button  */
-  --button-bg-color: white;
-  --button-color: black;
+  --button-bg-color: #538fdd;
+  --button-color: #ffffff;
   --button-border-radius: 50%;
   --button-height: 1.5rem;
   --button-width: 1.5rem;
@@ -136,7 +136,6 @@ a {
 }
 
 button {
-  background-color: var(--button-bg-color);
   color: var(--button-color);
   border-radius: var(--button-border-radius);
   cursor: pointer;
@@ -144,10 +143,14 @@ button {
   height: var(--button-height);
   width: var(--button-width);
   font-size: var(--button-font-size);
+  border: none;
+  transition: background 0.3s, transform 0.2s;
+  background: linear-gradient(135deg, #1a73e8, #155bb5);
 }
 
 button:hover {
   transform: scale(1.1);
+  background-color: #155bb5;
 }
 
 /* Dark Theme (Night) */
@@ -190,6 +193,9 @@ button {
   label {
     background-color: var(--dark-background);
     color: var(--dark-text);
+  }
+  .resume-container {
+    color: #1f2d3d;
   }
 }
 

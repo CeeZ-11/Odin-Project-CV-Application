@@ -12,6 +12,16 @@ main {
   margin: 2rem 6rem;
 }
 
+.editor > h1 {
+  background-color: #1f2d3d;
+  color: white;
+  padding: 1rem;
+}
+
+.editor h3 {
+  padding-left: 1rem;
+}
+
 .resume {
   display: flex;
   flex-direction: column;
@@ -47,6 +57,7 @@ main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.4em 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .wideSpan {
@@ -97,6 +108,13 @@ textarea:focus::placeholder {
   opacity: 0;
 }
 
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 5px rgba(26, 115, 232, 0.4);
+  outline: none;
+  border: 2px solid #1a73e8;
+}
+
 .titles {
   display: flex;
   align-items: end;
@@ -136,9 +154,10 @@ li input {
 .achievements-container,
 .education-container,
 .experience-container {
-  border: 1px solid black;
+  border: 1px solid #d1d9e6;
   border-radius: 10px;
   padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .achievements-li,
@@ -237,6 +256,16 @@ li input {
 .education-ul,
 .experience-ul {
   margin-bottom: 1.5rem;
+  padding: 1rem;
+}
+
+.skillsList {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.editor input,
+.editor textarea {
+  color: #333;
 }
 
 @media (max-width: 1200px) {
